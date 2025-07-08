@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Git Basics Tutorial</title>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+            max-width: 900px;
+            margin: auto;
+         }
+
+         h1,
+         h2 {
+            color: #2c3e50;
+         }
+
+         pre {
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            overflow-x: auto;
+         }
+
+         table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+         }
+
+         th,
+         td {
+            border: 1px solid #bdc3c7;
+            padding: 8px;
+            text-align: left;
+         }
+
+         th {
+            background-color: #dfe6e9;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>🧰 Git Basics Tutorial</h1>
+      <p>Git is a version control system that tracks changes in your code and helps you collaborate with others.</p>
+      <h2>1. <code>git init</code>
+      </h2>
+      <p>
+         <strong>Purpose</strong>: Initialize a new Git repository in your project folder.
+      </p>
+      <pre>
+			<code>git init</code>
+		</pre>
+      <p>This creates a hidden <code>.git/</code> folder and starts tracking your project locally. </p>
+      <h2>2. <code>git add .</code>
+      </h2>
+      <p>
+         <strong>Purpose</strong>: Add all files (in current directory and below) to the <strong>staging area</strong>.
+      </p>
+      <pre>
+			<code>git add .</code>
+		</pre>
+      <p>This prepares the files to be committed. The dot <code>.</code> means “all files”. </p>
+      <h2>3. <code>git config -l</code>
+      </h2>
+      <p>
+         <strong>Purpose</strong>: List all your Git configuration settings.
+      </p>
+      <pre>
+			<code>git config -l</code>
+		</pre>
+      <p>You’ll see settings like <code>user.name</code>, <code>user.email</code>, etc. </p>
+      <pre>
+			<code>git config --global user.name "Your Name"</code>
+            <code>git config --global user.email "your@email.com"</code>
+		</pre>
+      <h2>4. <code>git commit -m "first commit"</code>
+      </h2>
+      <p>
+         <strong>Purpose</strong>: Save a snapshot of your staged changes to the Git history with a message.
+      </p>
+      <pre>
+			<code>git commit -m "first commit"</code>
+		</pre>
+      <p>The <code>-m</code> lets you write a commit message inline. </p>
+      <h2>5. <code>git branch -M main</code>
+      </h2>
+      <p>
+         <strong>Purpose</strong>: Rename the current branch to <code>main</code>.
+      </p>
+      <pre>
+			<code>git branch -M main</code>
+		</pre>
+      <p>Best practice: Use <code>main</code> as the default branch instead of <code>master</code>. </p>
+      <h2>6. <code>git remote add origin &lt;repo-url&gt;</code>
+      </h2>
+      <p>
+         <strong>Purpose</strong>: Link your local repo to a <strong>remote repository</strong> (like GitHub).
+      </p>
+      <pre>
+			<code>git remote add origin https://github.com/your-username/your-repo.git</code>
+		</pre>
+      <p>This sets <code>origin</code> as a shortcut to your remote GitHub repo. </p>
+      <pre>
+			<code>git push -u origin main</code>
+		</pre>
+      <h2>✅ Quick Recap</h2>
+      <table>
+         <thead>
+            <tr>
+               <th>Command</th>
+               <th>What it Does</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  <code>git init</code>
+               </td>
+               <td>Initializes a local Git repo</td>
+            </tr>
+            <tr>
+               <td>
+                  <code>git add .</code>
+               </td>
+               <td>Stages all changes</td>
+            </tr>
+            <tr>
+               <td>
+                  <code>git config -l</code>
+               </td>
+               <td>Lists all Git settings</td>
+            </tr>
+            <tr>
+               <td>
+                  <code>git commit -m "msg"</code>
+               </td>
+               <td>Saves changes with a message</td>
+            </tr>
+            <tr>
+               <td>
+                  <code>git branch -M main</code>
+               </td>
+               <td>Renames the current branch to <code>main</code>
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <code>git remote add origin URL</code>
+               </td>
+               <td>Links to a remote GitHub repo</td>
+            </tr>
+         </tbody>
+      </table>
+    <br>
+    <br>
+  <footer style="text-align: right;"><em><strong>Version 1.0 | Regards, Omar</strong></em></footer>
+    </body>
+</html>
