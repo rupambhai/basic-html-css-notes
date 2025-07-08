@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Complete HTML & CSS Tutorial for Beginners</title>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            max-width: 900px;
+            padding: 20px;
+            background-color: #f4f6f8;
+            color: #333;
+         }
+
+         h1,
+         h2,
+         h3 {
+            color: #2c3e50;
+         }
+
+         nav {
+            background: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+         }
+
+         nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+         }
+
+         pre {
+            background: #eee;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            overflow-x: auto;
+         }
+
+         code {
+            font-family: monospace;
+         }
+
+         section {
+            margin-bottom: 40px;
+         }
+
+         ul li {
+            margin-bottom: 5px;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Complete HTML & CSS Tutorial for Absolute Beginners</h1>
+      <nav>
+         <a href="#html-intro">HTML Introduction</a>
+         <a href="#html-tags">HTML Tags</a>
+         <a href="#css-intro">CSS Introduction</a>
+         <a href="#css-selectors">CSS Selectors</a>
+         <a href="#css-boxmodel">CSS Box Model</a>
+         <a href="#practice">Practice Example</a>
+      </nav>
+      <section id="html-intro">
+         <h2>📄 HTML Introduction</h2>
+         <p>HTML (HyperText Markup Language) is the standard language used to create web pages.</p>
+         <pre>
+						<code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code>
+					</pre>
+      </section>
+      <section id="html-tags">
+         <h2>🏷️ Common HTML Tags</h2>
+         <ul>
+            <li>
+               <code>&lt;h1&gt; to &lt;h6&gt;</code> - Headings
+            </li>
+            <li>
+               <code>&lt;p&gt;</code> - Paragraph
+            </li>
+            <li>
+               <code>&lt;a href=""&gt;</code> - Link
+            </li>
+            <li>
+               <code>&lt;img src=""&gt;</code> - Image
+            </li>
+            <li>
+               <code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code> - Lists
+            </li>
+            <li>
+               <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> - Containers
+            </li>
+            <li>
+               <code>&lt;form&gt;, &lt;input&gt;, &lt;button&gt;</code> - Forms
+            </li>
+         </ul>
+      </section>
+      <section id="css-intro">
+         <h2>🎨 CSS Introduction</h2>
+         <p>CSS (Cascading Style Sheets) is used to style HTML elements.</p>
+         <pre>
+						<code>&lt;style&gt;
+h1 {
+  color: blue;
+  font-size: 30px;
+}
+&lt;/style&gt;</code>
+					</pre>
+         <p>You can also use external CSS:</p>
+         <pre>
+						<code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+					</pre>
+      </section>
+      <section id="css-selectors">
+         <h2>🎯 CSS Selectors</h2>
+         <ul>
+            <li>
+               <code>h1</code> - targets all &lt;h1&gt; tags
+            </li>
+            <li>
+               <code>.class</code> - targets all elements with that class
+            </li>
+            <li>
+               <code>#id</code> - targets a specific element with that ID
+            </li>
+         </ul>
+         <pre>
+						<code>.box {
+  background: yellow;
+}
+
+#header {
+  font-size: 24px;
+}</code>
+					</pre>
+      </section>
+      <section id="css-boxmodel">
+         <h2>📦 CSS Box Model</h2>
+         <p>Each element is a box made of:</p>
+         <ul>
+            <li>Content</li>
+            <li>Padding (inside spacing)</li>
+            <li>Border</li>
+            <li>Margin (outside spacing)</li>
+         </ul>
+         <pre>
+						<code>.card {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+}</code>
+					</pre>
+      </section>
+      <section id="practice">
+         <h2>🛠 Practice Example</h2>
+         <p>HTML + CSS combined:</p>
+         <pre>
+						<code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;style&gt;
+    .box {
+      background: #e0f7fa;
+      padding: 20px;
+      border: 2px solid #00796b;
+      margin: 20px 0;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="box"&gt;Styled Box&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code>
+					</pre>
+      </section>
+   </body>
+</html>
