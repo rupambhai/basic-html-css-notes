@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Box Model Tutorial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: #f9f9f9;
+    }
+    h1, h2 {
+      color: #333366;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-left: 4px solid #333366;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+    .recap-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .recap-table th, .recap-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    .recap-table th {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Box Model – Basic Tutorial</h1>
+
+  <p>Every HTML element on a web page is a box. The CSS Box Model describes how that box is structured:</p>
+
+  <pre>
++-----------------------------+
+|           Margin            |
+|  +-----------------------+  |
+|  |        Border         |  |
+|  |  +-----------------+  |  |
+|  |  |     Padding      | |  |
+|  |  |  +-----------+   | |  |
+|  |  |  |  Content  |   | |  |
+|  |  |  +-----------+   | |  |
+|  |  +-----------------+  |  |
+|  +-----------------------+  |
++-----------------------------+
+  </pre>
+
+  <h2>1. Content</h2>
+  <p>The content area is where your text or images appear.</p>
+  <pre><code>&lt;div class="box"&gt;Hello World&lt;/div&gt;
+
+.box {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+}</code></pre>
+
+  <h2>2. Padding</h2>
+  <p>Padding adds space inside the box, between the content and the border.</p>
+  <pre><code>padding: 20px;</code></pre>
+  <p>You can control each side individually:</p>
+  <pre><code>padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 20px;
+padding-left: 25px;</code></pre>
+  <p>Or use shorthand:</p>
+  <pre><code>padding: 10px 15px 20px 25px; /* top right bottom left */</code></pre>
+
+  <h2>3. Border</h2>
+  <p>Border adds a line around the padding and content.</p>
+  <pre><code>border: 2px solid black;
+border-top: 2px dashed red;
+border-bottom: 5px dotted green;</code></pre>
+
+  <h2>4. Width and Height</h2>
+  <p>These control the content size only by default. Padding and border add to the total size unless changed.</p>
+  <pre><code>.box {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 2px solid black;
+}</code></pre>
+  <p>Total size calculation:</p>
+  <ul>
+    <li>Width: 200 + 20(left) + 20(right) + 2(border left) + 2(border right) = 244px</li>
+    <li>Height: 100 + 20(top) + 20(bottom) + 2(border top) + 2(border bottom) = 144px</li>
+  </ul>
+
+  <h2>5. box-sizing</h2>
+  <p>By default, padding and border are added outside the width/height. You can fix this with:</p>
+  <pre><code>box-sizing: border-box;</code></pre>
+  <p>Now the width and height include padding and border. Total size stays 200x100.</p>
+
+  <h2>Example (All Together)</h2>
+  <pre><code>&lt;div class="box"&gt;Box Model&lt;/div&gt;
+
+.box {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  border: 5px solid darkblue;
+  background-color: lightyellow;
+  box-sizing: border-box;
+}</code></pre>
+
+  <h2>Quick Recap</h2>
+  <table class="recap-table">
+    <tr><th>Part</th><th>Description</th></tr>
+    <tr><td>Content</td><td>Actual text/images inside the box</td></tr>
+    <tr><td>Padding</td><td>Space inside the box, around content</td></tr>
+    <tr><td>Border</td><td>Line around the padding</td></tr>
+    <tr><td>Width/Height</td><td>Size of content (unless using border-box)</td></tr>
+  </table>
+
+  <br>
+  <br>
+  <footer style="text-align: right;"><em><strong>Version 1.0 | Regards, Omar</strong></em></footer>
+</body>
+</html>
